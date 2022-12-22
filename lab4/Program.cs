@@ -41,7 +41,8 @@ internal class Program
             maze.ClearLine(17);
             maze.Print(3, 18, maze.message, ink: ConsoleColor.DarkGreen);
         }
-        maze.Print(3, 17, "Поздравляю, вы прошли игру!!!", ink: ConsoleColor.Yellow);
+        maze.Print(3, 3);
+        maze.Print(3, 18, "Поздравляю, вы прошли игру!!!", ink: ConsoleColor.Yellow);
         Console.ReadKey();
     }
 }

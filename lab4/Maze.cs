@@ -3,7 +3,7 @@ class Maze
     //данные
     int playerX = 7; //начальная координата по x
     int playerY = 7; //начальная координата по y
-    double visibleDistance = 20; //прорисовка
+    double visibleDistance = 2.5; //прорисовка
     bool GreenKey = false; //зелёный ключ в кармане
     bool BlueKey = false; //синий ключ в кармане
     public bool Playing = true;
@@ -49,6 +49,7 @@ class Maze
 
         if (playerX == 14 && playerY == 1)
         {
+            visibleDistance = 20;
             Playing = false;
         }
         else
