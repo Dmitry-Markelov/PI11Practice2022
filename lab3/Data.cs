@@ -1,22 +1,28 @@
 ﻿class Story
 {
-    public int CurrentLocationId;
-    public string Intro;
-    public string Finale;
+    public bool End;
+    public int currentId;
+    public string Inro;
+    public string Final;
     public List<Location> Locations = new List<Location>();
+
+    public Location CurrentLocation { get => Locations.First(loc => loc.Id == currentId); }
 }
 
 class Location
 {
     public int Id;
-    public string Description;
+    public DelegateForMessage Description;
     public List<Option> Options = new List<Option>();
 }
 
 class Option
 {
     public string Title;
-    public DoWork Work;
+    public DelegateForVisible Visible;
+    public DelegateForWork Work;
 }
 
-delegate void DoWork();
+delegate bool DelegateForVisible ();
+delegate string DelegateForMessage ();
+delegate void DelegateForWork ();
