@@ -38,7 +38,7 @@ internal class Program
                     return;
             }
 
-            maze.ClearLine(17);
+            maze.ClearLine(18);
             maze.Print(3, 18, maze.message, ink: ConsoleColor.DarkGreen);
         }
         maze.Print(3, 3);
